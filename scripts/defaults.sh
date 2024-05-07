@@ -20,6 +20,27 @@ if has_consent; then
   killall Finder
 fi
 
+get_consent "Show Library Folder"
+if has_consent; then
+  e_pending "Displaying Library Folder"
+  chflags nohidden ~/Library
+fi
+
+get_consent "Display path bar"
+if has_consent; then
+  e_pending "Displaying path bar"
+  defaults write com.apple.finder ShowPathbar -bool true
+  killall Finder
+fi
+
+get_consent "Display status bar"
+if has_consent; then
+  e_pending "Displaying status bar"
+  defaults write com.apple.finder ShowStatusBar -bool true
+  killall Finder
+fi
+
+
 if ! has_path "Developer"; then
   get_consent "Create ~/Developer folder"
   if has_consent; then

@@ -24,6 +24,10 @@ declare -a app_name=(
 "visual-studio-code"
 "warp"
 "zoom"
+"atom"
+"docker"
+"postman"
+#"google-cloud-sdk"
 )
 
 declare -a app_desc=(
@@ -36,6 +40,10 @@ declare -a app_desc=(
 "Visual Studio Code"
 "Warp"
 "Zoom.us"
+"Atom"
+"Docker"
+"Postman"
+#"Google cloud sdk"
 )
 
 if has_command "brew"; then

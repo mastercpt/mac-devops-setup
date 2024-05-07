@@ -109,6 +109,130 @@ if has_command "python"; then
   fi
 fi
 
+if has_command "brew"; then
+  if ! has_command "vim"; then
+    get_consent "Install vim"
+    if has_consent; then
+      e_pending "Installing vim"
+      brew install vim
+      test_command "vim"
+    fi
+  fi
+fi
+
+if has_command "brew"; then
+  if ! has_command "aws"; then
+    get_consent "Install awscli"
+    if has_consent; then
+      e_pending "Installing awscli"
+      brew install awscli
+      test_command "aws"
+    fi
+  fi
+fi
+
+if has_command "brew"; then
+  if ! has_command "gh"; then
+    get_consent "Install gh"
+    if has_consent; then
+      e_pending "Installing gh"
+      brew install gh
+      test_command "gh"
+    fi
+  fi
+fi
+
+if has_command "brew"; then
+  if ! has_command "wget"; then
+    get_consent "Install wget"
+    if has_consent; then
+      e_pending "Installing wget"
+      brew install wget
+      test_command "wget"
+    fi
+  fi
+fi
+
+if has_command "brew"; then
+  if ! has_command "tree"; then
+    get_consent "Install tree"
+    if has_consent; then
+      e_pending "Installing tree"
+      brew install tree
+      test_command "tree"
+    fi
+  fi
+fi
+
+if has_command "brew"; then
+  if ! has_command "groovy"; then
+    get_consent "Install groovy"
+    if has_consent; then
+      e_pending "Installing groovy"
+      brew install groovy
+      test_command "groovy"
+    fi
+  fi
+fi
+
+if has_command "brew"; then
+  if ! has_command "curl"; then
+    get_consent "Install curl"
+    if has_consent; then
+      e_pending "Installing curl"
+      brew install curl
+      test_command "curl"
+    fi
+  fi
+fi
+
+if has_command "brew"; then
+  if ! has_command "telnet"; then
+    get_consent "Install telnet"
+    if has_consent; then
+      e_pending "Installing telnet"
+      brew install telnet
+      test_command "telnet"
+    fi
+  fi
+fi
+
+if has_command "brew"; then
+  if ! has_command "java"; then
+    get_consent "Install openjdk"
+    if has_consent; then
+      e_pending "Installing openjdk"
+      brew install openjdk
+      sudo ln -sfn /opt/homebrew/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
+      test_command "java"
+    fi
+  fi
+fi
+
+if has_command "brew"; then
+  if ! has_command "ansible"; then
+    get_consent "Install ansible"
+    if has_consent; then
+      e_pending "Installing ansible"
+      brew install ansible
+      test_command "ansible"
+    fi
+  fi
+fi
+
+if has_command "brew"; then
+  if ! has_command "ruby"; then
+    get_consent "Install ruby"
+    if has_consent; then
+      e_pending "Installing ruby"
+      brew install ruby
+      test_command "ruby"
+    fi
+  fi
+fi
+
+
+
 # ------------------------------------------------------------------------------
 e_message "Tools complete"
 # ------------------------------------------------------------------------------
