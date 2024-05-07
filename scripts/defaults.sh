@@ -6,15 +6,6 @@ source _utils.sh
 e_message "Creating defaults"
 # ------------------------------------------------------------------------------
 
-get_consent "Create Dock spacers"
-if has_consent; then
-  e_pending "Creating Dock spacers"
-  defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="spacer-tile";}'
-  defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="spacer-tile";}'
-  defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="spacer-tile";}'
-  killall Dock
-fi
-
 get_consent "Autohide Dock"
 if has_consent; then
   e_pending "Autohiding Dock"
@@ -38,15 +29,6 @@ if ! has_path "Developer"; then
   fi
 fi
 
-if ! has_path "Sandbox"; then
-  get_consent "Create ~/Sandbox folder"
-  if has_consent; then
-    e_pending "Creating ~/Sandbox folder"
-    mkdir -p ~/Sandbox
-    test_path "Sandbox"
-  fi
-fi
-
 if ! has_command "xcode-select"; then
   e_pending "Installing xcode-select (CLI tools)"
   xcode-select --install
@@ -60,6 +42,7 @@ if ! has_command "brew"; then
     echo 'eval "$(/opt/homebrew/bin/brew shellenv)"'>>$HOME/.zprofile
     eval "$(/opt/homebrew/bin/brew shellenv)"
   fi
+  brew update
   brew doctor
   brew tap homebrew/cask-fonts
   test_command "brew"

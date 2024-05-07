@@ -1,6 +1,6 @@
-# Mac dev setup
+# Mac devops setup
 
-> A macOS setup guide specific to front-end development.
+> A macOS setup guide specific to devops development.
 
 ## Guided Setup
 
@@ -8,8 +8,8 @@ For a guided setup, open up **Terminal.app** and run the following command:
 
 1. Save repo to `~/Downloads` folder:
    ```sh
-   git clone https://github.com/michaelschwobe/mac-dev-setup.git ~/Downloads/mac-dev-setup && \
-   cd ~/Downloads/mac-dev-setup/scripts
+   git clone https://github.com/mastercpt/mac-devops-setup.git ~/Downloads/mac-devops-setup && \
+   cd ~/Downloads/mac-devops-setup/scripts
    ```
 2. Run the installer script.
    ```sh
@@ -34,8 +34,8 @@ For those who prefer à la carte, this section contains everything that the **Gu
 
 1. If you haven’t already, save repo to `~/Downloads` folder:
    ```sh
-   git clone https://github.com/michaelschwobe/mac-dev-setup.git ~/Downloads/mac-dev-setup && \
-   cd ~/Downloads/mac-dev-setup/scripts
+   git clone https://github.com/mastercpt/mac-devops-setup.git ~/Downloads/mac-devops-setup && \
+   cd ~/Downloads/mac-devops-setup/scripts
    ```
 2. Continue with setup below.
 

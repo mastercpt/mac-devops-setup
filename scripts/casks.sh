@@ -19,13 +19,8 @@ declare -a app_name=(
 "brave-browser"
 "bruno"
 "discord"
-"figma"
 "google-chrome"
 "iterm2"
-"rectangle"
-"slack"
-"sourcetree"
-"spotify"
 "visual-studio-code"
 "warp"
 "zoom"
@@ -36,13 +31,8 @@ declare -a app_desc=(
 "Brave Browser"
 "Bruno"
 "Discord"
-"Figma"
 "Google Chrome"
 "iTerm"
-"Rectangle"
-"Slack"
-"Sourcetree"
-"Spotify"
 "Visual Studio Code"
 "Warp"
 "Zoom.us"
@@ -109,7 +99,7 @@ if has_app "Visual Studio Code"; then
     code --install-extension wix.vscode-import-cost
     code --install-extension yoavbls.pretty-ts-errors
     code --install-extension zignd.html-css-class-completion
-    cp ~/Downloads/mac-dev-setup/Code/* ~/Library/Application\ Support/Code/User
+    #cp ~/Downloads/mac-dev-setup/Code/* ~/Library/Application\ Support/Code/User
   fi
 fi
 
